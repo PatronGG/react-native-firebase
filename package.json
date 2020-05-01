@@ -16,9 +16,10 @@
     "format": "npm run format:assets && npm run lint -- --fix",
     "lint": "eslint ./src",
     "precommit": "lint-staged",
-    "prepublish": "npm run clean && npm run build",
+    "prepublish": "npm run snyk-protect && npm run clean && npm run build",
     "postinstall": "postinstall-build dist && opencollective postinstall || exit 0",
-    "validate-ts-declarations": "tsc --project ./"
+    "validate-ts-declarations": "tsc --project ./",
+    "snyk-protect": "snyk protect"
   },
   "repository": {
     "type": "git",
@@ -101,7 +102,8 @@
   "dependencies": {
     "opencollective": "^1.0.3",
     "postinstall-build": "^5.0.1",
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.6.2",
+    "snyk": "^1.316.1"
   },
   "rnpm": {
     "android": {
@@ -123,5 +125,6 @@
       "prettier --write",
       "git add"
     ]
-  }
+  },
+  "snyk": true
 }
