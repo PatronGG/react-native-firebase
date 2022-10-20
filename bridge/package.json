@@ -20,12 +20,12 @@
     "ios:pod:install": "cd ios && rm -rf ReactNativeFirebaseDemo.xcworkspace && pod install && cd .."
   },
   "dependencies": {
-    "jet": "0.0.2",
+    "jet": "0.7.0",
     "detox": "^8.1.1",
     "fbjs": "^0.8.16",
     "firebase-admin": "^5.12.0",
     "jsonwebtoken": "^8.2.1",
-    "mocha": "^5.2.0",
+    "mocha": "^10.1.0",
     "prop-types": "^15.6.1",
     "react": "^16.4.1",
     "react-native": "^0.56.0",
